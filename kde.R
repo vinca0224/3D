@@ -1,6 +1,6 @@
 version
 
-# install.packages("rgl")
+install.packages("rgl")
 # install.packages("misc3d")
 # install.packages("scatterplot3d")
 
@@ -13,7 +13,7 @@ library("rgl")
 library("scatterplot3d")
 
 ## 데이터 로드
-data  <- read.csv("../3D/points.csv")
+data  <- read.csv("../3D/data/points.csv")
 x <- data[,1]
 y <- data[,2]
 z <- data[,3]
@@ -39,7 +39,7 @@ kde_result <- kde3d(x, y, z,  n = 100, lims = c(limit$xlim, limit$ylim, limit$zl
 dens <- kde_result$d
 
 ## 밀도만 따로 csv로 저장
-write.csv(dens, "density.csv")
+write.csv(dens, "../3D/data/density.csv")
 
 ## 시각화
 open3d()
