@@ -1,11 +1,12 @@
 version
 
-install.packages("rgl")
+# install.packages("rgl")
 # install.packages("misc3d")
 # install.packages("scatterplot3d")
 
 installed.packages("misc3d")
 installed.packages("rgl")
+installed.packages("scatterplot3d")
 
 ## 라이브러리 호출
 library("misc3d")
